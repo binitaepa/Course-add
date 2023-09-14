@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/6yWG9Br/Rectangle-2-2.png",
+      "course_name": "Introduction to Programming",
+      "description": "Learn the fundamentals of programming with this beginner-friendly course.",
+      "credit": 3,
+      "price": 199.99
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/YZ0LmX6/Rectangle-2-5.png",
+      "course_name": "Web Development Fundamentals",
+      "description": "Build websites and web applications from scratch with HTML, CSS, and JavaScript.",
+      "credit": 4,
+      "price": 249.99
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/Dwk8xzV/Rectangle-2-3.png",
+      "course_name": "Data Structures and Algorithms",
+      "description": "Master data structures and algorithms for efficient problem-solving.",
+      "credit": 4,
+      "price": 299.99
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/rc8Qvy1/Rectangle-2-1.png",
+      "course_name": "My SQL and its Application",
+      "description": "Get started with SQL learning and explore its applications.",
+      "credit": 3,
+      "price": 349.99
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/MGYmQyM/Rectangle-2-6.png",
+      "course_name": "Cybersecurity Fundamentals",
+      "description": "Learn how to protect systems and data from cyber threats.",
+      "credit": 4,
+      "price": 279.99
+    },
+    {
+      "id": 6,
+      "img": "https://i.ibb.co/b6pK90B/Rectangle-2-4.png",
+      "course_name": "Introduction to C++",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "credit": 3,
+      "price": 229.99
+    },
+    {
+      "id": 7,
+      "img": "https://i.ibb.co/LdKB792/Rectangle-3-1.png",
+      "course_name": "Cloud Computing Essentials",
+      "description": "Explore cloud technologies and their role in modern IT.",
+      "credit": 4,
+      "price": 319.99
+    },
+    {
+      "id": 8,
+      "img": "https://i.ibb.co/pd8c1Gm/Rectangle-3.png",
+      "course_name": "Data Structure",
+      "description": "Create and learn data structure for any platforms.",
+      "credit": 4,
+      "price": 269.99
+    },
+    {
+      "id": 9,
+      "img": "https://i.ibb.co/Lh3YFkg/Rectangle-2.png",
+      "course_name": "Artificial Intelligence and Ethics",
+      "description": "Examine the ethical implications of AI and its impact on society.",
+      "credit": 3,
+      "price": 329.99
+    }
+  ]
+  
