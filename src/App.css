@@ -2,4 +2,9 @@
   
   align-items: center;
   text-align: center;
+  font-size: 32px;
+
+}
+.section{
+  margin: auto;
 }
