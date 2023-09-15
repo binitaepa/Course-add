@@ -8,6 +8,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
+
 .course-card{
     width:300px;
     height: 400px;

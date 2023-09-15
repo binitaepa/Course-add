@@ -7,10 +7,14 @@ import { FaDollarSign } from "react-icons/fa";
 import { FaBookOpen } from "react-icons/fa";
 
 
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 const Courses = () => {
     const [allCourses, setAllCourses] = useState([]);
     const [selectedCourse, setSelectedCourse] = useState([]);
-    const [remaining, setRemaining] = useState(0);
+    const [remaining, setRemaining] = useState(20);
     const [totalCredit, setTotalCredit] = useState(0);
   
     
@@ -19,6 +23,7 @@ const Courses = () => {
           .then((res) => res.json())
           .then((data) => setAllCourses(data));
       }, []);
+      
      
       const handleSelectedCourse=(courses)=>{
         const isExist = selectedCourse.find((item) => item.id == courses.id);
@@ -26,16 +31,21 @@ const Courses = () => {
         let cost = courses.credit;
     
         if (isExist) {
-          return alert("already showed");
+           toast("Ops! This course is already been selected");
+           
         } else {
           selectedCourse.forEach((item) => {
             cost = cost + item.credit;
           });
+       
           const remaining = 20 - cost;
+          
           if (cost >20) {
-           alert('ops sorry');
+            toast("Sorry! Credit can not exit 20 also remaining credit can not be less than 0.");
+           
             
-          } else {
+          } 
+          else {
             setRemaining(remaining);
     
             setTotalCredit(cost);
@@ -77,7 +87,8 @@ const Courses = () => {
                     ))
             }
         </div>
-        <div className='course-details-container'><Carts selectedCourse={selectedCourse} remaining={remaining} totalCredit={totalCredit}></Carts></div>
+        <div className='course-details-container'><ToastContainer position="top-center"
+></ToastContainer><Carts selectedCourse={selectedCourse} remaining={remaining} totalCredit={totalCredit}></Carts></div>
                 </div>
     );
 };
