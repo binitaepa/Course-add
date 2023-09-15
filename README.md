@@ -1,8 +1,9 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Three features of the project are:
 
-Currently, two official plugins are available:
+-By using selected button one can add courses on cart.
+-More than one same course can not be added on cart.
+-Credit can not be more than 20 hour when one select courses.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- there are 2 types of states has been used in my project useState and useEffect . By using UseEffect i have fetched my data from public folder. And use states are used for storing those data and also array data to use it as a project base scene.
