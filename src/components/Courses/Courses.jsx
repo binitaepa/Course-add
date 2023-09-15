@@ -10,6 +10,10 @@ import { FaBookOpen } from "react-icons/fa";
 const Courses = () => {
     const [allCourses, setAllCourses] = useState([]);
     const [selectedCourse, setSelectedCourse] = useState([]);
+    const [remaining, setRemaining] = useState(0);
+    const [totalCredit, setTotalCredit] = useState(0);
+  
+    
     useEffect(() => {
         fetch("./course-data.json")
           .then((res) => res.json())
@@ -17,7 +21,29 @@ const Courses = () => {
       }, []);
      
       const handleSelectedCourse=(courses)=>{
-        setSelectedCourse([...selectedCourse,courses]);
+        const isExist = selectedCourse.find((item) => item.id == courses.id);
+
+        let cost = courses.credit;
+    
+        if (isExist) {
+          return alert("already showed");
+        } else {
+          selectedCourse.forEach((item) => {
+            cost = cost + item.credit;
+          });
+          const remaining = 20 - cost;
+          if (cost >20) {
+           alert('ops sorry');
+            
+          } else {
+            setRemaining(remaining);
+    
+            setTotalCredit(cost);
+    
+            setSelectedCourse([...selectedCourse,courses]);
+          }
+        }
+        
 
       }
     
@@ -51,7 +77,7 @@ const Courses = () => {
                     ))
             }
         </div>
-        <div className='course-details-container'><Carts selectedCourse={selectedCourse}></Carts></div>
+        <div className='course-details-container'><Carts selectedCourse={selectedCourse} remaining={remaining} totalCredit={totalCredit}></Carts></div>
                 </div>
     );
 };
